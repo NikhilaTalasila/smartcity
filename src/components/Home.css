@@ -1,0 +1,103 @@
+/* src/components/Home.css */
+
+.home {
+    position: relative; /* Make positioning relative */
+    background-image: url('../assets/kal.jpg'); /* Adjust the path */
+    background-size: cover; /* Cover the entire area */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: center; /* Center horizontally */
+    color: white;
+    text-align: center;
+    overflow: hidden; /* Hide overflowing elements */
+    padding-top: 100px; /* Add padding to move content down from the top */
+}
+
+.thread {
+    position: absolute; /* Positioning absolute for animation */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 5px solid transparent; /* Initial border to create space */
+    z-index: 1; /* Place behind the content */
+    animation: threadAnimation 4s linear infinite; /* Animation */
+}
+
+@keyframes threadAnimation {
+    0% {
+        border-color: rgba(0, 102, 204, 0); /* Transparent start */
+    }
+    25% {
+        border-color: rgba(0, 102, 204, 0.5); /* Darker blue starts */
+    }
+    50% {
+        border-color: rgba(0, 102, 204, 1); /* Full darker blue visibility */
+    }
+    75% {
+        border-color: rgba(0, 102, 204, 0.5); /* Darker blue fades */
+    }
+    100% {
+        border-color: rgba(0, 102, 204, 0); /* Transparent end */
+    }
+}
+
+.thread::before,
+.thread::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 5px solid transparent; /* Transparent border to maintain layout */
+    box-sizing: border-box; /* Include border in element size */
+}
+
+.thread::before {
+    border-top: 5px solid rgba(0, 102, 204, 0.8); /* Top border with darker blue */
+    animation: threadAnimation 4s linear infinite; /* Animation for top border */
+}
+
+.thread::after {
+    border-bottom: 5px solid rgba(0, 102, 204, 0.8); /* Bottom border with darker blue */
+    animation: threadAnimation 4s linear infinite; /* Animation for bottom border */
+}
+
+/* Text Animation */
+.welcome-text {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px) scale(0.9); /* Start from below and smaller */
+    animation: fadeInScaleUp 1s forwards; /* Apply the fade-in-scale-up animation */
+    color: rgba(0, 128, 255, 1); /* Thicker bluish color */
+    font-weight: bold; /* Make the text thicker */
+}
+
+@keyframes fadeInScaleUp {
+    0% {
+        opacity: 0; /* Start invisible */
+        transform: translateY(20px) scale(0.9); /* Start slightly lower and smaller */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0) scale(1); /* Move to original position and full size */
+    }
+}
+/* Button Styles */
+.button {
+    background-color: #333; /* Same color as the navbar */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-color: #555; /* Darker shade on hover */
+}

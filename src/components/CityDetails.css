@@ -1,0 +1,49 @@
+/* src/components/CityDetails.css */
+
+.city-details {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .city-details h2 {
+    color: #2c3e50;
+    text-align: center; /* Center align the title */
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .details-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+  }
+  
+  .detail-card {
+    flex: 1 1 calc(50% - 10px); /* Two items per row */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .detail-card:hover {
+    transform: scale(1.02); /* Scale effect on hover */
+  }
+  
+  .detail-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Rounded corners for images */
+  }

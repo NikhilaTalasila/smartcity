@@ -1,0 +1,40 @@
+/* src/components/Contact.css */
+
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+      
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+      
+  .cities-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+  }
+      
+  .city-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+  }
+      
+  .city-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+      
+  .city-card h3 {
+    margin: 15px 0;
+    color: #2c3e50;
+  }
